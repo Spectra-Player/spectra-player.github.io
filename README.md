@@ -7,7 +7,7 @@ IPTV player. Astro 5 + Tailwind CSS v4, static output, zero client JS.
 
 ```sh
 npm install
-npm run dev        # http://localhost:4321/website/
+npm run dev        # http://localhost:4321/
 npm run build      # dist/
 npm run preview    # serve the production build
 ```
@@ -18,7 +18,7 @@ Pushes to `main` deploy to GitHub Pages via `.github/workflows/deploy.yml`
 (`withastro/action` + `actions/deploy-pages`). **One-time setup:** repo
 Settings → Pages → Source: **GitHub Actions**.
 
-Live at: https://spectra-player.github.io/website/ (until the custom domain lands)
+Live at: https://spectra-player.github.io/
 
 ### Custom domain later
 
