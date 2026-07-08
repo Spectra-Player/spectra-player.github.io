@@ -12,9 +12,11 @@ const {
 } = Astro.props;
 
 // The only place public/ assets are referenced — keep base-path handling here.
-const base = import.meta.env.BASE_URL;
+// BASE_URL comes without a trailing slash for project bases; normalize once.
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const canonical = new URL(base, Astro.site);
-const ogImage = new URL(`${base}og.png`.replace('//', '/'), Astro.site);
+const ogImage = new URL(`${base}og.png`, Astro.site);
 ---
 
 <!doctype html>
