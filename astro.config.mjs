@@ -2,10 +2,11 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-// Org-pages site (spectra-player.github.io) — serves at the root. When a custom
-// domain lands: set SITE_URL (and add public/CNAME); base stays '/'.
+// Project-pages defaults (repo: Spectra-Player/website → /website/ path).
+// When the custom domain is registered: add public/CNAME with the hostname and
+// change these two defaults to the domain and '/' — nothing else moves.
 const site = process.env.SITE_URL ?? 'https://spectra-player.github.io';
-const base = process.env.SITE_BASE ?? '/';
+const base = process.env.SITE_BASE ?? '/website';
 
 export default defineConfig({
   site,
